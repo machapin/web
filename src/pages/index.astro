@@ -17,9 +17,14 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
 // Content Fetching: List four most recent work projects
+// const projects = (await getCollection('work'))
+// 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+// 	.slice(0, 4);
+
+// number順にソート。位置は右下、右上、左上、左下の順
 const projects = (await getCollection('work'))
-	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-	.slice(0, 4);
+	.sort((a, b) => b.data.number - a.data.number);
+
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -30,14 +35,15 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is 鈴木 雅大"
-					tagline="I am a Mechanical Engineer Master Student who is also interested in AI and love the Outdoor."
+					title="Hello, my name is Suzuki Masahiro"
+					tagline="I am a Mechanical Engineer Master Student who is also interested in AI and likes traveling."
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="gear" size="1.33em" /> Mechanical Engineer</Pill>
 						<Pill><Icon icon="code" size="1.33em" /> AI Engineer</Pill>
-						<Pill><Icon icon="music" size="1.33em" /> musician</Pill>
+						<!-- <Pill><Icon icon="music" size="1.33em" /> musician</Pill> -->
+						<Pill><Icon icon="rocket-launch" size="1.33em" /> traveling</Pill>
 					</div>
 				</Hero>
 
@@ -45,18 +51,18 @@ const projects = (await getCollection('work'))
 					alt="Suzuki Masahrio smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
-					src="/assets/fuji_portrait.jpg"
+					src="/assets/line_icon.jpg"
 				/>
 			</header>
 
-			<Skills />
+			<!-- <Skills /> -->
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>My Interest</h3>
+					<p>Take a look below at some of my recent work. There are more to see in the experience tap if you are interested !</p>
 				</header>
 
 				<div class="gallery">
@@ -79,7 +85,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			<!-- <section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
@@ -99,7 +105,7 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
-			</section>
+			</section> -->
 		</main>
 
 		<ContactCTA />

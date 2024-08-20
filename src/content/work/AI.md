@@ -1,17 +1,20 @@
 ---
-title: Music Work
-publishDate: 2020-03-02 00:00:00
+title: AI
+publishDate: 2024-08-21 00:00:00
+number: 3
 img: /assets/stock-1.jpg
-# img_alt: Iridescent ripples of a bright blue and pink liquid
-vid: https://www.youtube.com/embed/bw8wSPzHXog?si=cKhGnHQ50_AVQ-Ke&
+img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
-  自分の好きな音楽の耳コピをやってます。
+  I am developing AI models.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - AI
+  - Deep Learning
+  - Python
 ---
 
+### Update later
+
+<!-- 
 ## Level-two heading
 
 > Tell me and I forget. Teach me and I remember. Involve me and I learn.
@@ -33,4 +36,4 @@ Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum qu
 #### Level-four heading
 
 - We noted this
-- And also this other point
+- And also this other point -->
