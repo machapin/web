@@ -10,7 +10,7 @@ import Hero from '../components/Hero.astro';
 		<main class="wrapper about">
 			<Hero
 				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				tagline="ご閲覧ありがとうございます。ここでは私自身と私の経歴について紹介します。"
 			>
 				<!-- <img
 					width="1553"
@@ -21,39 +21,81 @@ import Hero from '../components/Hero.astro';
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Introduction</h2>
+				<h2 class="section-title">自己紹介</h2>
 				<div class="content">
 					<p>
-						<!-- I am an accomplished Mechanical Engineering student at Osaka University. -->
-						Update later
+						私は、現在大阪大学で機械工学を専攻しています。
+						これまでに行ってきたことを形としてまとめたかったため、自身専用のWebサイトを作成することを決めました。
 					</p>
-					<!-- <p>
-						Update later
-					</p> -->
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
 					<p>
-						<!-- Osaka University -->
-						Update later
+						私は、機械学習に興味を強く持っています。
+					</p>
+					<p>
+						今後、私自身が作成したAIモデルをこのサイトで使っていただけるように、改良していきたいと考えています。
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Self Learning</h2>
-				<div class="content">
-					<p>
-						Update later
-					</p>
+				<h2 class="section-title">経歴</h2>
+				<div class="education-container">
+					<div class="education-item">
+						<h3>高校</h3>
+						<div class="education-details">
+							<p><strong>高松高等学校</strong></p>
+							<p>2015-2018 [卒業]</p>
+						</div>
+					</div>
+					<div class="education-item">
+						<h3>大学</h3>
+						<div class="education-details">
+							<p><strong>大阪大学</strong></p>
+							<p>2019-2023 [卒業]</p>
+							<p>基礎工学部</p>
+							<p>システム科学科</p>
+						</div>
+					</div>
+					<div class="education-item">
+						<h3>大学院</h3>
+						<div class="education-details">
+							<p><strong>大阪大学大学院</strong></p>
+							<p>2023-2025 [在学中]</p>
+							<p>基礎工学研究科</p>
+							<p>非線形力学領域</p>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Special Thanks</h2>
+				<h2 class="section-title">自己学習</h2>
 				<div class="content">
 					<p>
-						A special thanks to my friend <a href="https://www.lee-lit.com/" target="_blank" rel="noopener noreferrer">Napat Lilittrakul</a> for their support and inspiration.
+						参加した公開講座は以下の通りです。
+					</p>
+					<table>
+						<tr>
+							<th>期間</th>
+							<th>講座名</th>
+						</tr>
+						<tr>
+							<td>2022/1~2022/5</td>
+							<td>
+								<a href="https://deeplearning.jp/lectures/world-model-2021/" target="_blank" rel="noopener noreferrer">世界モデルと知能2021</a>
+							</td>
+						</tr>
+						<tr>
+							<td>2023/9~2023/10</td>
+							<td>
+								<a href="https://deeplearning.jp/llm2023/" target="_blank" rel="noopener noreferrer">サマースクール2023大規模言語モデル</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">謝辞</h2>
+				<div class="content">
+					<p>
+						サイト作成にあたり、同研究室の<a href="https://www.lee-lit.com/" target="_blank" rel="noopener noreferrer">Napat Lilittrakul</a>様に多方面でご協力いただきました。この場を借りてお礼申し上げます。
 					</p>
 				</div>
 			</section>
@@ -119,4 +161,73 @@ import Hero from '../components/Hero.astro';
 			font-size: var(--text-lg);
 		}
 	}
+
+	/* ====================================================== */
+	/* 経歴用 */
+	.education-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .education-item {
+		background-color: white; /* 初期状態の背景色を白に設定 */
+        /* background: linear-gradient(to bottom, #f5f5f5, #800080); */
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+		color: #333;
+        flex: 1;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 動きの遷移を追加 */
+    }
+	
+    .education-item h3 {
+		margin-bottom: 10px;
+        font-size: 1.4rem;
+		color: #7611A6; /* 初期状態のテキスト色 */
+		border-top: 1px solid black; /* 上部に黒線を追加 */
+		border-bottom: 1px solid black; /* 下部に黒線を追加 */
+		padding-top: 2px; /* 上部の線とテキストの間にスペースを追加 */
+		padding-bottom: 2px; /* 下部の線とテキストの間にスペースを追加 */
+
+    }
+	
+	.education-item .education-details {
+        opacity: 0; /* 初期状態で非表示 */
+        transform: translateY(20px); /* 初期状態で下に移動 */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .education-item:hover {
+		background: linear-gradient(to bottom, #ffffff, #cc99cc);
+        transform: translateY(-5px); /* カードを少し上に持ち上げる */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 影を追加 */
+    }
+
+    .education-item:hover h3,
+    .education-item:hover .education-details {
+        opacity: 1; /* ホバー時に表示 */
+        /* color: #fff; ホバー時のテキスト色を白に設定 */
+        transform: translateY(0); /* 元の位置に移動 */
+    }
+
+	/* ====================================================== */
+	/* 表全体に枠線を付ける */
+    table {
+        width: 100%;
+		margin-top: 20px; /* 上に20pxの余白を追加 */
+        border-collapse: collapse; /* セルの間に隙間をなくす */
+    }
+
+    /* 表のセルに枠線を付ける */
+    th, td {
+        border: 1px solid black; /* 黒の1ピクセル幅の線 */
+        padding: 8px; /* セル内に余白を追加 */
+        text-align: left; /* テキストを左揃え */
+    }
+
+    /* テーブルヘッダーのスタイル */
+    th {
+        background-color: #f2f2f2; /* ヘッダーの背景色を薄いグレーに */
+    }
 </style>

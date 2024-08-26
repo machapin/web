@@ -12,28 +12,29 @@ tags:
   - Fortran
 ---
 
-### Update later
 
-<!-- 
-## Level-two heading
+### はじめに
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+私は現在、大阪大学大学院基礎工学研究科、機能創生専攻非線形領域の<a href="https://fm.me.es.osaka-u.ac.jp/">後藤研究室</a>に所属しています。
+後藤研究室では、液体や気体、粉体などの様々な流れがある現象について、実験と数値シミュレーションが行われています。
+その中で私は、粘弾性流体と呼ばれる流体の数値シミュレーションを行っています。
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+### 粘弾性流体とは
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+そのFENE-Pモデルと呼ばれる手法を用いて、以下の3つの目標達成に向けて取り組んでいます。
 
-### Level-three heading
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+### 1. 外力駆動における乱流変量
 
-### Level-three heading
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+### 2. 実験系における
 
-#### Level-four heading
 
-- We noted this
-- And also this other point -->
+
+### 3. 機械学習を用いた構成方程式モデルの開発
+
+
+
+### 最後に
+
